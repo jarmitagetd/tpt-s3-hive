@@ -1,0 +1,29 @@
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-21.out
+Job id is ec2-user-21, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]: Instance 1 directing private log report to 'dtacop-ec2-user-14045-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT: private log specified: EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]: DataConnector Consumer operator Instances: 1
+$FILE_WRITER[1]: ECI operator ID: '$FILE_WRITER-14045'
+$EXPORT: connecting sessions
+$FILE_WRITER[1]: Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A_20170720.csv'.
+$EXPORT: sending SELECT request
+$EXPORT: entering End Export Phase
+$EXPORT: Total Rows Exported:  8
+$EXPORT: disconnecting sessions
+$FILE_WRITER[1]: Total files processed: 1.
+$EXPORT: Total processor time used = '0.064 Second(s)'
+$EXPORT: Start : Thu Jul 20 16:37:18 2017
+$EXPORT: End   : Thu Jul 20 16:37:25 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND: private log not specified
+$OS_COMMAND: Total processor time used = '0.004 Second(s)'
+$OS_COMMAND: Start : Thu Jul 20 16:37:27 2017
+$OS_COMMAND: End   : Thu Jul 20 16:37:28 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start: Thu Jul 20 16:37:14 2017
+Job end:   Thu Jul 20 16:37:28 2017

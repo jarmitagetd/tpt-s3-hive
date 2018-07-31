@@ -1,0 +1,36 @@
+DEFINE JOB EXPORT_BIW_ACCESS_lAYER
+DESCRIPTION 'Export access layer data from Teradata to Amazon S3'
+(
+    
+    STEP EXPORT_LIST_OBJECTS
+    (
+        APPLY TO OPERATOR ( $FILE_WRITER()
+            ATTR
+            (
+             DirectoryPath=@DirectoryPath||@TableName
+	        ,FileName=@TableName||'_'||@date1||'.csv'
+	        ,TextDelimiter=@TextDelimiter
+	        ,QuotedData=@QuotedData
+	        /*,AccessModuleName = 'libs3axsmod.so'*/
+            /*,AccessModuleInitStr = 'S3Bucket=rap-backend-testing S3Object=static-files/'||@TableName||'/'||@TableName||'_'||@date1||'.csv'||' S3SinglePartFile=True S3PartsPerFile=10000 S3Sse=True'*/
+	    )
+	)        
+        
+	SELECT * FROM OPERATOR ( $EXPORT
+	    ATTR
+            (
+            SelectStmt='select top 100 * from ' ||@databasename||'.'||@tablename||' where '||@datecol||' = '''||@date1||''';'
+	    )
+        );
+     );
+    STEP META_WRITE
+    (
+        APPLY TO OPERATOR ( $OS_COMMAND()
+            ATTR
+            (
+            OsCmd='tlogview -l /opt/teradata/client/15.10/tbuild/logs/'||$JOBID||'.out -v%M -f "TWB_STATUS" > /home/ec2-user/pocLoad/tpt/tptJob/facTpt/metadata/twb_status.txt'
+            )
+	);
+    );    
+    
+);

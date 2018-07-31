@@ -1,0 +1,21 @@
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-118.out
+Job id is ec2-user-118, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]: Instance 1 directing private log report to 'dtacop-ec2-user-30115-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT: private log specified: EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]: DataConnector Consumer operator Instances: 1
+$FILE_WRITER[1]: ECI operator ID: '$FILE_WRITER-30115'
+$EXPORT: TPT10551: CLI '224' occurred while connecting to the RDBMS
+$EXPORT: TPT10507: CLI Error 224: MTDP: EM_NOHOST(224): name not in HOSTS file or names database.
+$FILE_WRITER[1]: Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A_20170829.csv'.
+$EXPORT: TPT10507: CLI Error 224: CLI error 224 (no message text available)
+$EXPORT: Total processor time used = '0.012 Second(s)'
+$EXPORT: Start : Tue Aug 29 14:48:49 2017
+$EXPORT: End   : Tue Aug 29 14:48:50 2017
+$FILE_WRITER[1]: Total files processed: 0.
+Job step EXPORT_LIST_OBJECTS terminated (status 12)
+Job ec2-user terminated (status 12)
+Job start: Tue Aug 29 14:48:45 2017
+Job end:   Tue Aug 29 14:48:50 2017

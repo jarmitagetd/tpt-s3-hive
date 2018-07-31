@@ -1,0 +1,40 @@
+/***********************************************************************/
+/* TPT attributes common for all jobs                                   /
+/***********************************************************************/
+ TdpId = ''
+,TargetTdpId = ''
+,SourceTdpId = ''
+,UserName = ''
+,UserPassword = '$tdwallet()'
+,TargetUserName = ''
+,TargetUserPassword = '$tdwallet()'
+,SourceUserName = ''
+,SourceUserPassword = '$tdwallet()'
+,TargetErrorList = [ '3706','3803','3807' ]
+,DDLPrivateLogName = 'DDL_OPERATOR_LOG'
+
+/***********************************************************************/
+/* TPT EXPORT Operator attributes                                       /
+/***********************************************************************/
+,ExportPrivateLogName = 'EXPORT_OPERATOR_LOG'
+,MinSessions = 1
+,MaxSessions = 32
+,WorkingDatabase = ''
+
+/***********************************************************************/
+/* TPT FILE Operator attributes 				       */
+/***********************************************************************/
+,DirectoryPath = ''
+,DirectoryPathMeta = ''
+,FileName = ''
+,Format = 'DELIMITED'
+,TextDelimiter = ','
+,OpenMode = 'write'
+,QuotedData = 'yes'
+
+/***********************************************************************/
+/* OS Cmd attributes 						       */
+/***********************************************************************/
+,PrivateLogName = 'biwexp.log'
+,IgnoreError = 'YES'
+

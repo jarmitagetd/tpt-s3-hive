@@ -1,0 +1,20 @@
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-49.out
+Job id is ec2-user-49, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$FILE_WRITER[1]: Instance 1 directing private log report to 'dtacop-ec2-user-7828-1'.
+$EXPORT: private log specified: EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]: DataConnector Consumer operator Instances: 1
+$FILE_WRITER[1]: ECI operator ID: '$FILE_WRITER-7828'
+$EXPORT: connecting sessions
+$FILE_WRITER[1]: Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A_20170824.csv'.
+$EXPORT: TPT10507: CLI Error 235: MTDP: EM_GSSINITFAIL(235): call to gss_init failed. Failure No Kerberos credentials available 
+$FILE_WRITER[1]: Total files processed: 0.
+$EXPORT: Total processor time used = '0.012 Second(s)'
+$EXPORT: Start : Thu Aug 24 16:24:21 2017
+$EXPORT: End   : Thu Aug 24 16:24:21 2017
+Job step EXPORT_LIST_OBJECTS terminated (status 12)
+Job ec2-user terminated (status 12)
+Job start: Thu Aug 24 16:24:17 2017
+Job end:   Thu Aug 24 16:24:21 2017

@@ -1,0 +1,1264 @@
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-801.out
+Job id is ec2-user-801, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-20465-1'.
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-20465'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_HIER_A/VW_LU_SKU_HIER_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   100
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 14 15 32 2017
+$EXPORT  End     Sat Sep 16 14 15 38 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 14 15 40 2017
+$OS_COMMAND  End     Sat Sep 16 14 15 41 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 14 15 28 2017
+Job end    Sat Sep 16 14 15 41 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-802.out
+Job id is ec2-user-802, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.028 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 14 15 55 2017
+DDL_OPERATOR  End     Sat Sep 16 14 15 55 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-20555'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.488 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 14 15 58 2017
+UPDATE_OPERATOR  End     Sat Sep 16 14 16 14 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 14 15 52 2017
+Job end    Sat Sep 16 14 16 14 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-803.out
+Job id is ec2-user-803, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-20852-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-20852'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   8
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 14 16 29 2017
+$EXPORT  End     Sat Sep 16 14 16 35 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 14 16 37 2017
+$OS_COMMAND  End     Sat Sep 16 14 16 38 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 14 16 25 2017
+Job end    Sat Sep 16 14 16 38 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-804.out
+Job id is ec2-user-804, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 14 16 52 2017
+DDL_OPERATOR  End     Sat Sep 16 14 16 52 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-20941'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.492 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 14 16 54 2017
+UPDATE_OPERATOR  End     Sat Sep 16 14 17 10 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 14 16 49 2017
+Job end    Sat Sep 16 14 17 10 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA: TPT03624: Warning: tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-805.out
+Job id is ec2-user-805, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR: private log specified: ddlop_log
+DDL_OPERATOR: connecting sessions
+DDL_OPERATOR: sending SQL requests
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable1' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable2' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_WorkTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_LogTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: disconnecting sessions
+DDL_OPERATOR: Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR: Start : Sat Sep 16 14:17:24 2017
+DDL_OPERATOR: End   : Sat Sep 16 14:17:25 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]: Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR: private log specified: loadop_log
+FILE_READER[1]: DataConnector Producer operator Instances: 1
+FILE_READER[1]: ECI operator ID: 'FILE_READER-21241'
+FILE_READER[1]: Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/meta.txt'.
+UPDATE_OPERATOR: connecting sessions
+UPDATE_OPERATOR: preparing target table(s)
+UPDATE_OPERATOR: entering DML Phase
+UPDATE_OPERATOR: entering Acquisition Phase
+UPDATE_OPERATOR: entering Application Phase
+UPDATE_OPERATOR: Statistics for Target Table:  'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Rows Inserted: 3
+UPDATE_OPERATOR: Rows Updated:  0
+UPDATE_OPERATOR: Rows Deleted:  0
+UPDATE_OPERATOR: entering Cleanup Phase
+UPDATE_OPERATOR: Error Table Statistics for Target Table :   'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Total Rows in Error Table 1:   0
+UPDATE_OPERATOR: Total Rows in Error Table 2:   0
+UPDATE_OPERATOR: disconnecting sessions
+FILE_READER[1]: Total files processed: 1.
+UPDATE_OPERATOR: Total processor time used = '0.5 Second(s)'
+UPDATE_OPERATOR: Start : Sat Sep 16 14:17:27 2017
+UPDATE_OPERATOR: End   : Sat Sep 16 14:17:43 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start: Sat Sep 16 14:17:21 2017
+Job end:   Sat Sep 16 14:17:43 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-806.out
+Job id is ec2-user-806, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-22050-1'.
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-22050'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_HIER_A/VW_LU_SKU_HIER_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   100
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 14 26 55 2017
+$EXPORT  End     Sat Sep 16 14 27 01 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 14 27 03 2017
+$OS_COMMAND  End     Sat Sep 16 14 27 04 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 14 26 51 2017
+Job end    Sat Sep 16 14 27 04 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-807.out
+Job id is ec2-user-807, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 14 27 18 2017
+DDL_OPERATOR  End     Sat Sep 16 14 27 19 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-22181'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.496 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 14 27 22 2017
+UPDATE_OPERATOR  End     Sat Sep 16 14 27 37 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 14 27 15 2017
+Job end    Sat Sep 16 14 27 37 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-808.out
+Job id is ec2-user-808, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-22435-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-22435'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   8
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 14 27 53 2017
+$EXPORT  End     Sat Sep 16 14 27 58 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 14 28 00 2017
+$OS_COMMAND  End     Sat Sep 16 14 28 01 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 14 27 49 2017
+Job end    Sat Sep 16 14 28 01 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-809.out
+Job id is ec2-user-809, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.028 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 14 28 14 2017
+DDL_OPERATOR  End     Sat Sep 16 14 28 15 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-22564'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.488 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 14 28 18 2017
+UPDATE_OPERATOR  End     Sat Sep 16 14 28 33 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 14 28 12 2017
+Job end    Sat Sep 16 14 28 33 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA: TPT03624: Warning: tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-810.out
+Job id is ec2-user-810, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR: private log specified: ddlop_log
+DDL_OPERATOR: connecting sessions
+DDL_OPERATOR: sending SQL requests
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable1' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable2' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_WorkTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_LogTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: disconnecting sessions
+DDL_OPERATOR: Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR: Start : Sat Sep 16 14:28:47 2017
+DDL_OPERATOR: End   : Sat Sep 16 14:28:48 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]: Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR: private log specified: loadop_log
+FILE_READER[1]: DataConnector Producer operator Instances: 1
+FILE_READER[1]: ECI operator ID: 'FILE_READER-22819'
+FILE_READER[1]: Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/meta.txt'.
+UPDATE_OPERATOR: connecting sessions
+UPDATE_OPERATOR: preparing target table(s)
+UPDATE_OPERATOR: entering DML Phase
+UPDATE_OPERATOR: entering Acquisition Phase
+UPDATE_OPERATOR: entering Application Phase
+UPDATE_OPERATOR: Statistics for Target Table:  'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Rows Inserted: 2
+UPDATE_OPERATOR: Rows Updated:  0
+UPDATE_OPERATOR: Rows Deleted:  0
+UPDATE_OPERATOR: entering Cleanup Phase
+UPDATE_OPERATOR: Error Table Statistics for Target Table :   'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Total Rows in Error Table 1:   0
+UPDATE_OPERATOR: Total Rows in Error Table 2:   0
+UPDATE_OPERATOR: disconnecting sessions
+FILE_READER[1]: Total files processed: 1.
+UPDATE_OPERATOR: Total processor time used = '0.492 Second(s)'
+UPDATE_OPERATOR: Start : Sat Sep 16 14:28:51 2017
+UPDATE_OPERATOR: End   : Sat Sep 16 14:29:07 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start: Sat Sep 16 14:28:44 2017
+Job end:   Sat Sep 16 14:29:07 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-811.out
+Job id is ec2-user-811, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-30054-1'.
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-30054'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_HIER_A/VW_LU_SKU_HIER_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   100
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 16 29 47 2017
+$EXPORT  End     Sat Sep 16 16 29 53 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 16 29 55 2017
+$OS_COMMAND  End     Sat Sep 16 16 29 56 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 16 29 43 2017
+Job end    Sat Sep 16 16 29 56 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-812.out
+Job id is ec2-user-812, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.028 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 16 30 10 2017
+DDL_OPERATOR  End     Sat Sep 16 16 30 10 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-30185'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.492 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 16 30 13 2017
+UPDATE_OPERATOR  End     Sat Sep 16 16 30 29 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 16 30 07 2017
+Job end    Sat Sep 16 16 30 29 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-813.out
+Job id is ec2-user-813, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-30437-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-30437'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   8
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 16 30 43 2017
+$EXPORT  End     Sat Sep 16 16 30 49 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 16 30 51 2017
+$OS_COMMAND  End     Sat Sep 16 16 30 52 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 16 30 40 2017
+Job end    Sat Sep 16 16 30 52 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-814.out
+Job id is ec2-user-814, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 16 31 06 2017
+DDL_OPERATOR  End     Sat Sep 16 16 31 07 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-30566'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.492 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 16 31 10 2017
+UPDATE_OPERATOR  End     Sat Sep 16 16 31 25 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 16 31 03 2017
+Job end    Sat Sep 16 16 31 25 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA: TPT03624: Warning: tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-815.out
+Job id is ec2-user-815, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR: private log specified: ddlop_log
+DDL_OPERATOR: connecting sessions
+DDL_OPERATOR: sending SQL requests
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable1' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable2' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_WorkTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_LogTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: disconnecting sessions
+DDL_OPERATOR: Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR: Start : Sat Sep 16 16:31:39 2017
+DDL_OPERATOR: End   : Sat Sep 16 16:31:40 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]: Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR: private log specified: loadop_log
+FILE_READER[1]: DataConnector Producer operator Instances: 1
+FILE_READER[1]: ECI operator ID: 'FILE_READER-30821'
+FILE_READER[1]: Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/meta.txt'.
+UPDATE_OPERATOR: connecting sessions
+UPDATE_OPERATOR: preparing target table(s)
+UPDATE_OPERATOR: entering DML Phase
+UPDATE_OPERATOR: entering Acquisition Phase
+UPDATE_OPERATOR: entering Application Phase
+UPDATE_OPERATOR: Statistics for Target Table:  'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Rows Inserted: 2
+UPDATE_OPERATOR: Rows Updated:  0
+UPDATE_OPERATOR: Rows Deleted:  0
+UPDATE_OPERATOR: entering Cleanup Phase
+UPDATE_OPERATOR: Error Table Statistics for Target Table :   'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Total Rows in Error Table 1:   0
+UPDATE_OPERATOR: Total Rows in Error Table 2:   0
+UPDATE_OPERATOR: disconnecting sessions
+FILE_READER[1]: Total files processed: 1.
+UPDATE_OPERATOR: Total processor time used = '0.492 Second(s)'
+UPDATE_OPERATOR: Start : Sat Sep 16 16:31:43 2017
+UPDATE_OPERATOR: End   : Sat Sep 16 16:31:59 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start: Sat Sep 16 16:31:36 2017
+Job end:   Sat Sep 16 16:31:59 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-816.out
+Job id is ec2-user-816, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-31560-1'.
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-31560'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_HIER_A/VW_LU_SKU_HIER_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   100
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 16 39 32 2017
+$EXPORT  End     Sat Sep 16 16 39 38 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 16 39 40 2017
+$OS_COMMAND  End     Sat Sep 16 16 39 41 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 16 39 28 2017
+Job end    Sat Sep 16 16 39 41 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-817.out
+Job id is ec2-user-817, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 16 39 55 2017
+DDL_OPERATOR  End     Sat Sep 16 16 39 56 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-31686'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.496 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 16 39 59 2017
+UPDATE_OPERATOR  End     Sat Sep 16 16 40 14 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 16 39 52 2017
+Job end    Sat Sep 16 16 40 14 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-818.out
+Job id is ec2-user-818, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-31943-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-31943'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   8
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 16 40 29 2017
+$EXPORT  End     Sat Sep 16 16 40 34 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 16 40 36 2017
+$OS_COMMAND  End     Sat Sep 16 16 40 37 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 16 40 26 2017
+Job end    Sat Sep 16 16 40 37 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-819.out
+Job id is ec2-user-819, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 16 40 51 2017
+DDL_OPERATOR  End     Sat Sep 16 16 40 52 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-32028'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.496 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 16 40 55 2017
+UPDATE_OPERATOR  End     Sat Sep 16 16 41 11 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 16 40 48 2017
+Job end    Sat Sep 16 16 41 11 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA: TPT03624: Warning: tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-820.out
+Job id is ec2-user-820, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR: private log specified: ddlop_log
+DDL_OPERATOR: connecting sessions
+DDL_OPERATOR: sending SQL requests
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable1' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable2' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_WorkTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_LogTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: disconnecting sessions
+DDL_OPERATOR: Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR: Start : Sat Sep 16 16:41:25 2017
+DDL_OPERATOR: End   : Sat Sep 16 16:41:25 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]: Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR: private log specified: loadop_log
+FILE_READER[1]: DataConnector Producer operator Instances: 1
+FILE_READER[1]: ECI operator ID: 'FILE_READER-32331'
+FILE_READER[1]: Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/meta.txt'.
+UPDATE_OPERATOR: connecting sessions
+UPDATE_OPERATOR: preparing target table(s)
+UPDATE_OPERATOR: entering DML Phase
+UPDATE_OPERATOR: entering Acquisition Phase
+UPDATE_OPERATOR: entering Application Phase
+UPDATE_OPERATOR: Statistics for Target Table:  'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Rows Inserted: 2
+UPDATE_OPERATOR: Rows Updated:  0
+UPDATE_OPERATOR: Rows Deleted:  0
+UPDATE_OPERATOR: entering Cleanup Phase
+UPDATE_OPERATOR: Error Table Statistics for Target Table :   'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Total Rows in Error Table 1:   0
+UPDATE_OPERATOR: Total Rows in Error Table 2:   0
+UPDATE_OPERATOR: disconnecting sessions
+FILE_READER[1]: Total files processed: 1.
+UPDATE_OPERATOR: Total processor time used = '0.5 Second(s)'
+UPDATE_OPERATOR: Start : Sat Sep 16 16:41:27 2017
+UPDATE_OPERATOR: End   : Sat Sep 16 16:41:43 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start: Sat Sep 16 16:41:22 2017
+Job end:   Sat Sep 16 16:41:43 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-821.out
+Job id is ec2-user-821, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-359-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-359'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_HIER_A/VW_LU_SKU_HIER_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   100
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 16 45 57 2017
+$EXPORT  End     Sat Sep 16 16 46 03 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 16 46 05 2017
+$OS_COMMAND  End     Sat Sep 16 16 46 06 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 16 45 53 2017
+Job end    Sat Sep 16 16 46 06 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-822.out
+Job id is ec2-user-822, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 16 46 20 2017
+DDL_OPERATOR  End     Sat Sep 16 16 46 20 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-492'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.496 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 16 46 23 2017
+UPDATE_OPERATOR  End     Sat Sep 16 16 46 39 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 16 46 17 2017
+Job end    Sat Sep 16 16 46 39 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-823.out
+Job id is ec2-user-823, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-752-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-752'
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A_20170916.csv'.
+$EXPORT  connecting sessions
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   8
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 16 46 54 2017
+$EXPORT  End     Sat Sep 16 16 47 00 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 16 47 02 2017
+$OS_COMMAND  End     Sat Sep 16 16 47 03 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 16 46 50 2017
+Job end    Sat Sep 16 16 47 03 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-824.out
+Job id is ec2-user-824, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 16 47 17 2017
+DDL_OPERATOR  End     Sat Sep 16 16 47 17 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-879'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.496 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 16 47 19 2017
+UPDATE_OPERATOR  End     Sat Sep 16 16 47 35 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 16 47 14 2017
+Job end    Sat Sep 16 16 47 35 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA: TPT03624: Warning: tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-825.out
+Job id is ec2-user-825, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR: private log specified: ddlop_log
+DDL_OPERATOR: connecting sessions
+DDL_OPERATOR: sending SQL requests
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable1' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable2' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_WorkTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_LogTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: disconnecting sessions
+DDL_OPERATOR: Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR: Start : Sat Sep 16 16:47:49 2017
+DDL_OPERATOR: End   : Sat Sep 16 16:47:50 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]: Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR: private log specified: loadop_log
+FILE_READER[1]: DataConnector Producer operator Instances: 1
+FILE_READER[1]: ECI operator ID: 'FILE_READER-1138'
+FILE_READER[1]: Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/meta.txt'.
+UPDATE_OPERATOR: connecting sessions
+UPDATE_OPERATOR: preparing target table(s)
+UPDATE_OPERATOR: entering DML Phase
+UPDATE_OPERATOR: entering Acquisition Phase
+UPDATE_OPERATOR: entering Application Phase
+UPDATE_OPERATOR: Statistics for Target Table:  'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Rows Inserted: 2
+UPDATE_OPERATOR: Rows Updated:  0
+UPDATE_OPERATOR: Rows Deleted:  0
+UPDATE_OPERATOR: entering Cleanup Phase
+UPDATE_OPERATOR: Error Table Statistics for Target Table :   'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Total Rows in Error Table 1:   0
+UPDATE_OPERATOR: Total Rows in Error Table 2:   0
+UPDATE_OPERATOR: disconnecting sessions
+FILE_READER[1]: Total files processed: 1.
+UPDATE_OPERATOR: Total processor time used = '0.496 Second(s)'
+UPDATE_OPERATOR: Start : Sat Sep 16 16:47:52 2017
+UPDATE_OPERATOR: End   : Sat Sep 16 16:48:07 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start: Sat Sep 16 16:47:46 2017
+Job end:   Sat Sep 16 16:48:07 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-826.out
+Job id is ec2-user-826, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-1732-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-1732'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_HIER_A/VW_LU_SKU_HIER_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   100
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 16 53 22 2017
+$EXPORT  End     Sat Sep 16 16 53 30 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 16 53 32 2017
+$OS_COMMAND  End     Sat Sep 16 16 53 33 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 16 53 17 2017
+Job end    Sat Sep 16 16 53 33 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-827.out
+Job id is ec2-user-827, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 16 53 47 2017
+DDL_OPERATOR  End     Sat Sep 16 16 53 47 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-1818'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.492 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 16 53 50 2017
+UPDATE_OPERATOR  End     Sat Sep 16 16 54 06 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 16 53 44 2017
+Job end    Sat Sep 16 16 54 06 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA  TPT03624  Warning  tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-828.out
+Job id is ec2-user-828, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]  Instance 1 directing private log report to 'dtacop-ec2-user-2124-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT  private log specified  EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]  DataConnector Consumer operator Instances  1
+$FILE_WRITER[1]  ECI operator ID  '$FILE_WRITER-2124'
+$EXPORT  connecting sessions
+$FILE_WRITER[1]  Operator instance 1 processing file '/home/ec2-user/s3/static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A_20170916.csv'.
+$EXPORT  sending SELECT request
+$EXPORT  entering End Export Phase
+$EXPORT  Total Rows Exported   8
+$EXPORT  disconnecting sessions
+$FILE_WRITER[1]  Total files processed  1.
+$EXPORT  Total processor time used = '0.08 Second(s)'
+$EXPORT  Start   Sat Sep 16 16 54 21 2017
+$EXPORT  End     Sat Sep 16 16 54 27 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND  private log not specified
+$OS_COMMAND  Total processor time used = '0.004 Second(s)'
+$OS_COMMAND  Start   Sat Sep 16 16 54 29 2017
+$OS_COMMAND  End     Sat Sep 16 16 54 30 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start  Sat Sep 16 16 54 17 2017
+Job end    Sat Sep 16 16 54 30 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log  /opt/teradata/client/15.10/tbuild/logs/ec2-user-829.out
+Job id is ec2-user-829, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR  private log specified  ddlop_log
+DDL_OPERATOR  connecting sessions
+DDL_OPERATOR  sending SQL requests
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable1' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_ErrTable2' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_WorkTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  TPT10508  RDBMS error 3807  Object 'biw_sand_01.Status_MetaData_LogTable' does not exist.
+DDL_OPERATOR  TPT18046  Error is ignored as requested in ErrorList
+DDL_OPERATOR  disconnecting sessions
+DDL_OPERATOR  Total processor time used = '0.024 Second(s)'
+DDL_OPERATOR  Start   Sat Sep 16 16 54 44 2017
+DDL_OPERATOR  End     Sat Sep 16 16 54 44 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]  Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR  private log specified  loadop_log
+FILE_READER[1]  DataConnector Producer operator Instances  1
+FILE_READER[1]  ECI operator ID  'FILE_READER-2211'
+FILE_READER[1]  Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/twb_status.txt'.
+UPDATE_OPERATOR  connecting sessions
+UPDATE_OPERATOR  preparing target table(s)
+UPDATE_OPERATOR  entering DML Phase
+UPDATE_OPERATOR  entering Acquisition Phase
+UPDATE_OPERATOR  entering Application Phase
+UPDATE_OPERATOR  Statistics for Target Table   'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Rows Inserted  27
+UPDATE_OPERATOR  Rows Updated   0
+UPDATE_OPERATOR  Rows Deleted   0
+UPDATE_OPERATOR  entering Cleanup Phase
+UPDATE_OPERATOR  Error Table Statistics for Target Table     'TB_RT_JOB_STATUS_TBL'
+UPDATE_OPERATOR  Total Rows in Error Table 1    0
+UPDATE_OPERATOR  Total Rows in Error Table 2    0
+UPDATE_OPERATOR  disconnecting sessions
+FILE_READER[1]  Total files processed  1.
+UPDATE_OPERATOR  Total processor time used = '0.496 Second(s)'
+UPDATE_OPERATOR  Start   Sat Sep 16 16 54 47 2017
+UPDATE_OPERATOR  End     Sat Sep 16 16 55 03 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully
+Job start  Sat Sep 16 16 54 41 2017
+Job end    Sat Sep 16 16 55 03 2017
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+TPT_INFRA: TPT03624: Warning: tbuild -s option argument specifies the first job step;
+  no job steps will be skipped (unless this is a restarted job).
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-830.out
+Job id is ec2-user-830, running on danis-test2
+Teradata Parallel Transporter SQL DDL Operator Version 15.10.01.07
+DDL_OPERATOR: private log specified: ddlop_log
+DDL_OPERATOR: connecting sessions
+DDL_OPERATOR: sending SQL requests
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable1' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable2' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_WorkTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: TPT10508: RDBMS error 3807: Object 'biw_sand_01.TB_RT_TPT_JOB_CNTL_LogTable' does not exist.
+DDL_OPERATOR: TPT18046: Error is ignored as requested in ErrorList
+DDL_OPERATOR: disconnecting sessions
+DDL_OPERATOR: Total processor time used = '0.028 Second(s)'
+DDL_OPERATOR: Start : Sat Sep 16 16:55:17 2017
+DDL_OPERATOR: End   : Sat Sep 16 16:55:18 2017
+Job step STATUS_TABLE_SETUP completed successfully
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+FILE_READER[1]: Instance 1 directing private log report to 'dataconop_log-1'.
+Teradata Parallel Transporter Update Operator Version 15.10.01.07
+UPDATE_OPERATOR: private log specified: loadop_log
+FILE_READER[1]: DataConnector Producer operator Instances: 1
+FILE_READER[1]: ECI operator ID: 'FILE_READER-2522'
+FILE_READER[1]: Operator instance 1 processing file '/home/ec2-user/pocLoad/tpt/tptJob/refTpt/metadata/meta.txt'.
+UPDATE_OPERATOR: connecting sessions
+UPDATE_OPERATOR: preparing target table(s)
+UPDATE_OPERATOR: entering DML Phase
+UPDATE_OPERATOR: entering Acquisition Phase
+UPDATE_OPERATOR: entering Application Phase
+UPDATE_OPERATOR: Statistics for Target Table:  'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Rows Inserted: 2
+UPDATE_OPERATOR: Rows Updated:  0
+UPDATE_OPERATOR: Rows Deleted:  0
+UPDATE_OPERATOR: entering Cleanup Phase
+UPDATE_OPERATOR: Error Table Statistics for Target Table :   'TB_RT_TPT_JOB_CNTL'
+UPDATE_OPERATOR: Total Rows in Error Table 1:   0
+UPDATE_OPERATOR: Total Rows in Error Table 2:   0
+UPDATE_OPERATOR: disconnecting sessions
+FILE_READER[1]: Total files processed: 1.
+UPDATE_OPERATOR: Total processor time used = '0.492 Second(s)'
+UPDATE_OPERATOR: Start : Sat Sep 16 16:55:21 2017
+UPDATE_OPERATOR: End   : Sat Sep 16 16:55:37 2017
+Job step STATUS_TABLE_LOAD completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start: Sat Sep 16 16:55:14 2017
+Job end:   Sat Sep 16 16:55:37 2017

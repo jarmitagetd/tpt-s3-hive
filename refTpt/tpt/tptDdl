@@ -1,0 +1,25 @@
+DEFINE JOB EXPORT_BIW_ACCESS_lAYER
+DESCRIPTION 'Export access layer data from Teradata to Amazon S3'
+(
+    
+    STEP EXPORT_LIST_OBJECTS
+    (
+        APPLY TO OPERATOR ( $FILE_WRITER()
+            ATTR
+            (
+              DirectoryPath='hive/'
+	     ,FileName='hivetbls.txt'
+	     ,TextDelimiter=':'
+	     ,OpenMode='Write'
+	    )
+	)        
+        
+	SELECT * FROM OPERATOR ( $EXPORT
+	    ATTR
+            (
+            SelectStmt='SEL TABLENAME tblName ,ColumnName colName ,CASE WHEN columnname LIKE ''%_ID'' THEN ''INT'' WHEN columnname LIKE ''%_CD'' THEN ''STRING'' WHEN columnname LIKE ''%_DESC'' THEN ''STRING'' WHEN columnname LIKE ''%_DT'' THEN ''DATE'' WHEN columnname LIKE ''%_NUM'' THEN ''INT'' WHEN columnname LIKE ''%_TS'' THEN ''TIMESTAMP'' ELSE ''STRING'' END DataType ,CASE WHEN ColumnId = MAX(ColumnID) OVER (PARTITION BY TABLENAME)THEN '''' ELSE '','' END addComma FROM dbc.columnsv WHERE databasename = ''REST_BIW_ACC_V'' AND TABLENAME LIKE ''VW_LU_%A'' GROUP BY tblname, colname, DataType, ColumnId, TABLENAME ORDER BY TABLENAME,ColumnID;'
+	    )
+        );
+     );
+    
+);

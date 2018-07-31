@@ -1,0 +1,132 @@
+/*****************************************************************/
+/*                                                               */
+/* COPYRIGHT 2001-2007, Teradata Corporation.                    */
+/* ALL RIGHTS RESERVED.                                          */
+/* TERADATA CONFIDENTIAL AND TRADE SECRET.                       */
+/* This copyrighted material is the confidential, unpublished    */
+/* property of Teradata Corp. This copyright notice and any other*/
+/* copyright notices included in machine readable copies must be */
+/* reproduced on all authorized copies.                          */
+/*                                                               */
+/* Script Name : twb_meta.txt                                    */
+/*===============================================================*/
+/* Loads Teradata Parallel Transporter job status information    */
+/* into the table: TB_RT_TPT_JOB_CNTL                            */ 
+/*                                                               */
+/* The table is loaded from the file meta.txt                    */
+/*                                                               */
+/* Run this script as follows from the command-line:             */
+/* tbuild -f twb_meta.txt                                        */ 
+/*                                                               */
+/*****************************************************************/
+
+DEFINE JOB LOAD_OPERATIONAL_METADATA
+DESCRIPTION 'LOADING OPERATIONAL METADATA TO TABLES'
+(
+   DEFINE SCHEMA METADATA_SCHEMA
+   DESCRIPTION 'METADATA SCHEMA'
+   (
+     load_date           varchar(30),
+     databasename        varchar(30),
+     tablename           varchar(30),
+     start_ts            varchar(30),
+     end_ts              varchar(30),
+     duration            varchar(30),
+     rowcount            varchar(30),
+     return_code         varchar(30)
+   );
+
+   DEFINE OPERATOR DDL_OPERATOR()
+   DESCRIPTION 'TERADATA PARALLEL TRANSPORTER DDL OPERATOR'
+   TYPE DDL
+   ATTRIBUTES
+   (
+      VARCHAR PrivateLogName = 'ddlop_log',
+      VARCHAR TdpId          = '10.30.44.43',     /* Replace tdpid with process ID/machine name */
+      /*VARCHAR UserName       = 'james.armitage',  Replace user  with username */ 
+      /*VARCHAR UserPassword   = 'Azymuth1',         Replace pswd  with password */
+      VARCHAR AccountID,
+      VARCHAR ErrorList      = '3807'
+   );
+
+   DEFINE OPERATOR UPDATE_OPERATOR()
+   DESCRIPTION 'TERADATA PARALLEL TRANSPORTER UPDATE OPERATOR'
+   TYPE UPDATE
+   SCHEMA METADATA_SCHEMA
+   ATTRIBUTES
+   (
+      VARCHAR PrivateLogName    = 'loadop_log',
+      INTEGER MaxSessions       =  32,
+      INTEGER MinSessions       =  1,
+      VARCHAR TargetTable       = 'TB_RT_TPT_JOB_CNTL',
+      VARCHAR WorkingDatabase   = 'biw_sand_01',
+      VARCHAR TdpId             = '10.30.44.43',   
+      /*VARCHAR UserName          = 'james.armitage',*/    
+      /*VARCHAR UserPassword      = 'Azymuth1',*/    
+      VARCHAR ARRAY ErrorTable1 = ['biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable1'],
+      VARCHAR ARRAY ErrorTable2 = ['biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable2'],
+      VARCHAR ARRAY WorkTable   = ['biw_sand_01.TB_RT_TPT_JOB_CNTL_WorkTable'],
+      VARCHAR LogTable          = 'biw_sand_01.TB_RT_TPT_JOB_CNTL_LogTable'
+   );
+
+   DEFINE OPERATOR FILE_READER()
+   DESCRIPTION 'TERADATA PARALLEL TRANSPORTER DATA CONNECTOR OPERATOR'
+   TYPE DATACONNECTOR PRODUCER
+   SCHEMA METADATA_SCHEMA
+   ATTRIBUTES
+   (
+      VARCHAR PrivateLogName    = 'dataconop_log',
+      VARCHAR DirectoryPath     = '.',
+      VARCHAR FileName          = 'meta.txt',
+      VARCHAR OpenMode          = 'Read',
+      VARCHAR Format            = 'Delimited',
+      VARCHAR TextDelimiter     = '|',
+      VARCHAR IndicatorMode,
+      INTEGER VigilWaitTime,
+      INTEGER VigilElapsedTime
+   );
+
+   STEP STATUS_TABLE_SETUP
+   (
+      APPLY
+      ('drop table biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable1;'),
+      ('drop table biw_sand_01.TB_RT_TPT_JOB_CNTL_ErrTable2;'),
+      ('drop table biw_sand_01.TB_RT_TPT_JOB_CNTL_WorkTable;'),
+      ('drop table biw_sand_01.TB_RT_TPT_JOB_CNTL_LogTable;')
+      /* ('drop table biw_sand_01.TB_RT_TPT_JOB_CNTL;'), */
+      /*('create multiset table biw_sand_01.TB_RT_TPT_JOB_CNTL ( */
+      /*      load_date   varchar(30) */
+      /*     ,databasename varchar(30)*/                         
+      /*     ,tablename	varchar(30)*/
+      /*     ,start_ts    varchar(30)*/
+      /*     ,end_ts      varchar(30)*/
+      /*     ,duration    varchar(30)*/
+      /*     ,rowcount    varchar(30)*/
+      /*     ,return_code varchar(30)*/
+      /*	);') */
+      TO OPERATOR (DDL_OPERATOR ());
+
+   );
+
+   STEP STATUS_TABLE_LOAD
+   (
+      APPLY
+      ('insert into biw_sand_01.TB_RT_TPT_JOB_CNTL (
+           :load_date,
+           :databasename,
+           :tablename,
+           :start_ts,                
+           :end_ts,           
+           :duration,            
+           :rowcount,           
+           :return_code          
+           );'
+       )
+
+       TO OPERATOR (UPDATE_OPERATOR () [1] )
+
+       SELECT * FROM OPERATOR (FILE_READER() [1] );
+   );
+
+);
+

@@ -1,0 +1,28 @@
+DEFINE JOB EXPORT_BIW_ACCESS_lAYER
+DESCRIPTION 'Export access layer data from Teradata to Amazon S3'
+(
+    
+    STEP EXPORT_LIST_OBJECTS
+    (
+        APPLY TO OPERATOR ( $FILE_WRITER()
+            ATTR
+            (
+            /* DirectoryPath=@DirectoryPath */
+            QuotedData='yes'
+            ,TextDelimiter=','
+	    /* ,FileName='SALES_BASKET.csv' */
+            ,AccessModuleName = 'libs3axsmod.so'
+            ,AccessModuleInitStr = 'S3Bucket=rap-backend-testing S3Object=static-files/sales_basket.csv S3SinglePartFile=True S3PartsPerFile=2000 S3Sse=True'
+
+	    )
+	)        
+        
+	SELECT * FROM OPERATOR ( $EXPORT
+	    ATTR
+            (
+	    DateForm = 'ANSIDATE'
+            ,SelectStmt='SELECT SKU_ID,SKU_NUM,CHILD_STORE_ID,TRAN_DT,TRAN_TM,TRANSACTION_NUM,GROSS_UNITS_QTY,WEIGHT,UNIT_PRICE FROM REST_BIW_ACC_V.VW_F_SALES_BASKET_A VW_F_SALES_BASKET_A INNER JOIN REST_BIW_ACC_V.VW_LU_DAY_A VW_LU_DAY_A ON VW_F_SALES_BASKET_A.TRAN_DT = VW_LU_DAY_A.DAY_DT WHERE SKU_NUM IN (1193961, 671682, 6001324, 1198850, 547703, 7680387, 1198997, 7731419, 1191417, 1192049, 6002373, 7150747, 1192094, 2448, 131544, 1192056, 1253665, 6287853) AND VW_LU_DAY_A.FIN_YEAR_ID = 2016;'
+	    )
+        );
+    );
+);

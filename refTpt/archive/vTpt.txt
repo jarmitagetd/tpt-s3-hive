@@ -1,0 +1,27 @@
+/***********************************************************************/
+/* TPT attributes common for all jobs                                   /
+/***********************************************************************/
+/* TargetTdpId = '10.30.44.43'*/
+/*,TargetUserName = 'james.armitage'*/
+/*,TargetUserPassword = 'Azymuth1'*/
+TargetErrorList = [ '3706','3803','3807' ]
+,DDLPrivateLogName = 'DDL_OPERATOR_LOG'
+
+/***********************************************************************/
+/* TPT EXPORT Operator attributes                                       /
+/***********************************************************************/
+ExportPrivateLogName = 'EXPORT_OPERATOR_LOG'
+,SourceTdpId = '10.30.44.43'
+,SourceUserName = 'james.armitage'
+,SourceUserPassword = 'Azymuth1'
+,MinSessions = 1
+,MaxSessions = 32
+,DatabaseName = 'REST_BIW_ACC_V'
+
+/***********************************************************************/
+/* TPT FILE Operator attributes 				       */
+/***********************************************************************/
+,DirectoryPath = '/home/ec2-user/'
+,Format = 'DELIMITED'
+,TextDelimiteer = ','
+,OpenMode = 'WRITE'

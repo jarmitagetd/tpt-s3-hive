@@ -1,0 +1,32 @@
+#!/bin/bash
+
+ref="refs.txt"
+dte=$(date +%Y%m%d)
+tme=$(date | awk '{print $4}')
+
+rm meta.txt
+
+IFS=':'
+while read -r db ref
+  if [ -z $ref ]
+    then break	#break loop on null (eof)
+  fi 
+do  	
+  echo starting $ref tpt export job ....
+  echo removing existing s3 $ref reference data files ....
+  aws s3 rm --recursive s3://rap-backend-testing/static-files/$ref/
+
+  tme=$(date | awk '{print $4}')
+  SECONDS=0
+  tbuild -s1 -f tptRef -v vTpt.txt -u "databasename='$db' tablename='$ref', FileName='$ref' Date1='$dte'" 2>&1 > job$dte.log
+  duration=$SECONDS 
+  x=$(cat "job$dte.log" | grep "TPT Exit code set to" | awk '{gsub("[.]+","",$8); print $8}')
+  echo $dte\|$db\|$ref\|"$tme"\|"`date | awk '{print $4}'`"\|"$duration"\|`cat "job$dte.log" | grep "Total Rows Exported" | awk -F ":" '{gsub(" ", "", $3); print $3}'`\|$x >> meta.txt
+
+done < "$ref"
+echo loading control table ..
+tbuild -f twb_meta.txt
+
+
+
+

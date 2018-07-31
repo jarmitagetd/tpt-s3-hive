@@ -1,0 +1,22 @@
+DEFINE JOB EXPORT_BIW_ACCESS_lAYER
+DESCRIPTION 'Export access layer data from Teradata to Amazon S3'
+(
+    
+    STEP EXPORT_LIST_OBJECTS
+    (
+        APPLY TO OPERATOR ( $FILE_WRITER()
+            ATTR
+            (
+             DirectoryPath=@DirectoryPath||'VW_F_SALES_BASKET_A/'
+	    ,FileName='VW_F_SALES_BASKET_A_CP.txt'
+	    )
+	)        
+        
+	SELECT * FROM OPERATOR ( $EXPORT
+	    ATTR
+            (
+            SelectStmt='SEL TOP 10000 * FROM REST_BIW_ACC_V.VW_W_F_SALES_BASKET_A WHERE TRAN_DT BETWEEN DATE - 38 AND DATE -1 AND start_ts = DATE  -1;'
+	    )
+        );
+    );
+);

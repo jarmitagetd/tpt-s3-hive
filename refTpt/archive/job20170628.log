@@ -1,0 +1,60 @@
+Teradata Parallel Transporter Version 15.10.01.07 64-Bit
+Job log: /opt/teradata/client/15.10/tbuild/logs/ec2-user-7907.out
+Job id is ec2-user-7907, running on danis-test2
+Teradata Parallel Transporter DataConnector Operator Version 15.10.01.07
+$FILE_WRITER[1]: Instance 1 directing private log report to 'dtacop-ec2-user-10878-1'.
+Teradata Parallel Transporter Export Operator Version 15.10.01.07
+$EXPORT: private log specified: EXPORT_OPERATOR_LOG
+$FILE_WRITER[1]: DataConnector Consumer operator Instances: 1
+S3AXM [10878]: AWS S3 ACCESS Module -- 'MODULE_NAME=AWS_S3_ACCESS_MODULE'   Version: MODULE_VERS=15.10.01.01.
+S3AXM [10878]: COPYRIGHT 2016, 2017, Teradata Corporation.  ALL RIGHTS RESERVED.
+S3AXM [10878]: Compiled for PLATFORM_ID=Linux x8664 (64 bit) on Jun 14 2017
+S3AXM [10878]: pmdcomt header version 'Common 15.10.00.00', packing 'pack (push, 1)'
+S3AXM [10878]: pmddamt header version 'Common 15.10.00.00', packing 'pack (push, 1)'
+S3AXM [10878]: This Beta Version of S3_Access_Module valid until Jun 30 19:28:56 2017
+S3AXM [10878]: AXMS3 Library built on Jun  1 2017 10:15:16
+S3AXM [10878]: Default AWS Credentials/Profile directory set from $HOME to: /home/ec2-user/.aws
+S3AXM [10878]: Attribute Set Request type 2: 'TBR_OP_HANDLE'
+S3AXM [10878]: Attribute Set Request type 1: 'CHARSET_NAME=ASCII'
+S3AXM [10878]: Attribute Set Request type 1: 'PRESERVE_RESTART_INFO=YES'
+$FILE_WRITER[1]: ECI operator ID: '$FILE_WRITER-10878'
+S3AXM [10878]: 	S3 Parameter        Parameter Value                     Parameter Origin
+S3AXM [10878]: 	-------------       --------------------------------    ---------------------
+S3AXM [10878]: 	S3ConfigDir       = /home/ec2-user/.aws                 $HOME environment variable
+S3AXM [10878]: 	S3Profile         = default                             Default
+S3AXM [10878]: 	S3Region          = eu-west-1                           AWS "config" file
+S3AXM [10878]: 	S3Bucket          = rap-backend-testing                 Module Parameters
+S3AXM [10878]: 	S3Prefix          =                                     Default
+S3AXM [10878]: 	S3Object          = static-files/VW_LU_SKU_GROUP_A/VW_LU_SKU_GROUP_A.csv    Module Parameters
+S3AXM [10878]: 	S3ConnectionCount = 10                                  Default
+S3AXM [10878]: 	S3BufferCount     = 20                                  Computed Default
+S3AXM [10878]: 	S3BufferSize      = 8388608                             Default
+S3AXM [10878]: 	S3SinglePartFile  = True                                Module Parameters
+S3AXM [10878]: 	S3PartsPerFile    = 2000                                Module Parameters
+S3AXM [10878]: 	S3Sse             = True                                Module Parameters
+S3AXM [10878]: 	S3AccessID        = ************6WLA                    AWS "credentials" file
+S3AXM [10878]: 	S3AccessKey       = ************7+Tu                    AWS "credentials" file
+S3AXM [10878]: 	-----------------------------------------------------------------------------
+$EXPORT: connecting sessions
+$FILE_WRITER[1]: Operator instance 1 processing file 'VW_LU_SKU_GROUP_A'.
+$EXPORT: sending SELECT request
+$EXPORT: entering End Export Phase
+$EXPORT: Total Rows Exported:  1
+S3AXM [10878]: EOF Statistics:   0.000 megabytes sent to S3 in    2.0 secs,   0.00 megabytes/sec,  0.0 sec user   0.0 sec system
+S3AXM [10878]: Attribute Set Request type 1: 'PRESERVE_RESTART_INFO=NO'
+S3AXM [10878]: AWS S3 ACCESS Module Shutdown Completed
+$EXPORT: disconnecting sessions
+$FILE_WRITER[1]: Total files processed: 1.
+$EXPORT: Total processor time used = '0.064 Second(s)'
+$EXPORT: Start : Wed Jun 28 15:26:35 2017
+$EXPORT: End   : Wed Jun 28 15:26:47 2017
+Job step EXPORT_LIST_OBJECTS completed successfully
+Teradata Parallel Transporter OS Command Operator Version 15.10.01.07
+$OS_COMMAND: private log not specified
+$OS_COMMAND: Total processor time used = '0.004 Second(s)'
+$OS_COMMAND: Start : Wed Jun 28 15:26:48 2017
+$OS_COMMAND: End   : Wed Jun 28 15:26:49 2017
+Job step META_WRITE completed successfully
+Job ec2-user completed successfully, but with warning(s).
+Job start: Wed Jun 28 15:26:31 2017
+Job end:   Wed Jun 28 15:26:49 2017
